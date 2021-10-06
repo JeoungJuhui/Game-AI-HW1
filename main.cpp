@@ -7,6 +7,16 @@
 void Eleanor;
 void Chidi;
 void Michael;
+bool accident, planning, meet;
+
+//엘리너의 상태... 어떻게 할까?
+//윤리 공부를 하거나 산책 둘 중 하나로 정하자. 기본 루틴.
+
+void Eleanor_state(bool a, bool b, bool c) {
+
+
+
+}
 
 
 int main()

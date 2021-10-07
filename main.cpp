@@ -8,6 +8,11 @@
 //각 캐릭터 별 상태, 대사 출력 코드 만들기
 //상태 출력 이후 변화 type
 
+//10.08
+//마이클 상태 수정 make trap->satisfied
+//deceive 삭제. make plan, plan completed, satisfied 의 세가지 상태 사용.
+//엘리너 상태 수정 eat 추가.
+
 
 
 int count_plan = 0;
@@ -27,11 +32,11 @@ void Eleanor_state(bool accident, bool planning, bool meet)
 		state = "study";
 		printf("Eleanor is studying ethics.\n");
 	}
-	
-	else if (!accident && !planning && !meet)
+
+	else if (!accident && planning && !meet)
 	{
 		state = "make mistake";
-		
+
 		printf("Eleanor makes mistake!\n");
 		printf("The town is going to break!\n");
 		printf("Eleanor: OMG! What did I do!\n");
@@ -44,9 +49,13 @@ void Eleanor_state(bool accident, bool planning, bool meet)
 		state = "regret";
 
 		printf("Eleanor: Chidi! The town is going to break! I guess I acted selfishly again!\n");
-		
-	}
 
+	}
+	else
+	{
+		state = "eat";
+		printf("Eleanor eat Yogurt ice cream.\n");
+	}
 }
 
 void Chidi_state(bool accident, bool planning, bool meet)
@@ -80,6 +89,7 @@ void Chidi_state(bool accident, bool planning, bool meet)
 		g_planning = false;
 	}
 
+
 }
 
 void Michael_state(bool accident, bool planning)
@@ -88,9 +98,10 @@ void Michael_state(bool accident, bool planning)
 
 	if (!accident && !planning)
 	{
-		state = "make plan";
 		if (count_plan >= 3)
 		{
+			state = "plan completed";
+
 			g_planning = true;
 
 			count_plan = 0;
@@ -99,34 +110,30 @@ void Michael_state(bool accident, bool planning)
 		}
 		else
 		{
+			state = "make plan";
+
 			count_plan++;
 			printf("Michael: Aha! I have an idea!\n");
 			printf("Michael makes plan. (%d/3)\n", count_plan);
 
 		}
 	}
-	else if (!accident && planning)
-	{
-		state = "make trap";
-		printf("Michael call Janet.\n");
-		printf("Michael: Janet! Let's make a trap!\n");
-		printf("Janet: Ok.\n");
-		printf("Michael makes trap for Eleanor with Janet.\n");
-
-	}
 	else if (accident && planning)
 	{
-		state = "deceive";
-		printf("Michael: Oh...\n");
+		state = "satisfied";
+		printf("Michael watching Eleanor's mistake.\n");
+		printf("Michael: It's going as planned.\n");
+		printf("Michael is satisfied.\n");
+		
 	}
+	
 }
-
 
 
 int main()
 {
 
-	for (int i = 0; i < 10; i++)
+	for (int i = 0; i < 30; i++)
 	{
 		Eleanor_state(g_accident, g_planning, g_meet);
 		//엘리너 출력

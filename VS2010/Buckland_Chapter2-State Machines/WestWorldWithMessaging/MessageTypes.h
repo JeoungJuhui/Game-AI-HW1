@@ -5,9 +5,9 @@
 
 enum message_type
 {
-  Msg_HiHoneyImHome,
-  Msg_StewReady,
-  Msg_Hee_haw  // 고양이 메세지 추가
+  Msg_Helpme_Eleanor,
+  Msg_Helpme_Chidi,
+  Msg_Be_careful_Eleanor //메세지 타입 추가.
 };
 
 
@@ -15,17 +15,19 @@ inline std::string MsgToStr(int msg)
 {
   switch (msg)
   {
-  case Msg_HiHoneyImHome:
-    
-    return "HiHoneyImHome"; 
 
-  case Msg_StewReady:
-    
-    return "StewReady";
 
-  case Msg_Hee_haw:
+  case Msg_Helpme_Eleanor:
 
-	  return "Hee-haw!";
+      return "Help me Eleanor";
+
+  case Msg_Helpme_Chidi:
+
+      return "Help me Chidi";
+      
+  case Msg_Be_careful_Eleanor:
+
+      return "Be careful Eleanor";
 
   default:
 

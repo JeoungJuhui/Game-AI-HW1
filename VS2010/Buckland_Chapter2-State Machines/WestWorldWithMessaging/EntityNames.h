@@ -5,28 +5,28 @@
 
 enum 
 {
-  ent_Miner_Bob,
+  ent_Eleanor,
 
-  ent_Elsa,
+  ent_Chidi,
 
-  ent_Cat  //고양이 추가
+  ent_Michael //캐릭터의 이름을 추가. 엘리너, 치디, 마이클
 };
 
 inline std::string GetNameOfEntity(int n)
 {
   switch(n)
   {
-  case ent_Miner_Bob:
+  case ent_Eleanor:
 
-    return "Miner Bob";
+      return "Eleanor";
 
-  case ent_Elsa:
-    
-    return "Elsa"; 
+  case ent_Chidi:
 
-  case ent_Cat:  
+      return "Chidi";
+  
+  case ent_Michael:
 
-	  return "Cat";
+      return "Michael";
 
   default:
 

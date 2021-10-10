@@ -30,25 +30,25 @@
     <ClCompile Include="MessageDispatcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Miner.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MinerOwnedStates.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MinersWife.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="MinersWifeOwnedStates.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\Common\Time\CrudeTimer.cpp">
       <Filter>misc</Filter>
     </ClCompile>
-    <ClCompile Include="Cat.cpp">
+    <ClCompile Include="Eleanor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CatOwnedStates.cpp">
+    <ClCompile Include="EleanorOwnedStates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Michael.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MichaelOwnedStates.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chidi.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ChidiOwnedStates.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -69,18 +69,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MessageTypes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Miner.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MinerOwnedStates.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MinersWife.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="MinersWifeOwnedStates.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Common\FSM\State.h">
@@ -110,10 +98,22 @@
     <ClInclude Include="..\..\Common\misc\utils.h">
       <Filter>misc</Filter>
     </ClInclude>
-    <ClInclude Include="CatOwnedStates.h">
+    <ClInclude Include="Eleanor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Cat.h">
+    <ClInclude Include="EleanorOwnedStates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MichaelOwnedStates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Michael.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Chidi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ChidiOwnedStates.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

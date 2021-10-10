@@ -4,11 +4,9 @@
 
 enum location_type
 {
-  shack,
-  goldmine,
-  bank,
-  saloon,
-  yard  // 장소 추가
+  home,  
+  town,   
+  office //장소 추가 집, 마을, 사무실
 };
 
 

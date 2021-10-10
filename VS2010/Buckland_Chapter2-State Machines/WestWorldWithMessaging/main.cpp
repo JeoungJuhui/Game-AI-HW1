@@ -1,10 +1,20 @@
+// B877033 JJH
+// <Game AI Fall 2021 Homework#1>
+// Make FSM based script
+
+// Netflix drama GoodPlace S1
+// Charactor: Eleanor, Chidi, Michael
+
 #include <fstream>
 #include <time.h>
+#include <string.h>
 
 #include "Locations.h"
-#include "Miner.h"
-#include "MinersWife.h"
-#include "Cat.h"   // 고양이 추가
+
+#include "Eleanor.h"
+#include "Chidi.h"
+#include "Michael.h"
+
 #include "EntityManager.h"
 #include "MessageDispatcher.h"
 #include "misc/ConsoleUtils.h"
@@ -23,36 +33,43 @@ int main()
   //seed random number generator
   srand((unsigned) time(NULL));
 
-  //create a miner
-  Miner* Bob = new Miner(ent_Miner_Bob);
 
-  //create his wife
-  MinersWife* Elsa = new MinersWife(ent_Elsa);
+  Eleanor* mEleanor = new Eleanor(ent_Eleanor);
+  Chidi* mChidi = new Chidi(ent_Chidi);
+  Michael* mMichael = new Michael(ent_Michael);
 
-  Cat* mCat = new Cat(ent_Cat);  // 고양이 추가
 
   //register them with the entity manager
-  EntityMgr->RegisterEntity(Bob);
-  EntityMgr->RegisterEntity(Elsa);
-  EntityMgr->RegisterEntity(mCat);
+
+  EntityMgr->RegisterEntity(mEleanor);
+  EntityMgr->RegisterEntity(mChidi);
+  EntityMgr->RegisterEntity(mMichael);
+
+
 
   //run Bob and Elsa through a few Update calls
   for (int i=0; i<30; ++i)
   { 
-    Bob->Update();
-    Elsa->Update();
-	mCat->Update();
+
+    mEleanor->Update();
+    mChidi->Update();
+    mMichael->Update();
 
     //dispatch any delayed messages
     Dispatch->DispatchDelayedMessages();
 
-    //Sleep(800);
+    Sleep(800);
   }
 
+
+  printf("\n\n\nEleanor: OMG! I knew it! this is the Badplace!\n\n");
+
   //tidy up
-  delete Bob;
-  delete Elsa;
-  delete mCat;
+
+  delete mEleanor;
+  delete mChidi;
+  delete mMichael;
+
 
   //wait for a keypress before exiting
   PressAnyKeyToContinue();
